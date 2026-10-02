@@ -7,8 +7,8 @@ Versao: **0.1.0**.
 
 ## Disponibilidade
 
-A versao 0.1.0 ainda nao esta disponivel no pub.dev. As instrucoes de
-instalacao abaixo se aplicam quando o pacote estiver disponivel.
+O pacote esta disponivel no [pub.dev](https://pub.dev/packages/spalla_flutter).
+Use as instrucoes de instalacao abaixo para adicionar o SDK ao aplicativo.
 Este repositorio contem somente documentacao para integradores, licenca
 e suporte via issues. Nao e um checkout do pacote Flutter.
 
