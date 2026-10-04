@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+- Android: o botao de Cast abre o seletor de dispositivos.
+- Cast usa o receiver Spalla `7238CBCE` por padrao.
+- Conteudo carregado durante uma sessao Cast ativa e enviado ao receiver.
+
 ## 0.1.0
 
 - Player Flutter Android/iOS integrado aos servicos Spalla.

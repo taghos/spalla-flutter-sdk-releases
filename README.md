@@ -3,7 +3,7 @@
 Player Spalla para aplicativos Flutter Android e iOS, com controles
 compartilhados, fullscreen, selecao de faixas, anuncios, Cast e PiP.
 
-Versao: **0.1.0**.
+Versao: **0.1.1**.
 
 ## Disponibilidade
 
@@ -22,13 +22,15 @@ e suporte via issues. Nao e um checkout do pacote Flutter.
 | iOS | >= 15.0, CocoaPods |
 
 Obtenha seu token SDK e os identificadores de conteudo na Spalla.
-Para Cast, use o application ID do receiver configurado para sua integracao.
+Para Cast, o SDK usa o receiver Spalla padrao `7238CBCE` quando nenhum
+application ID e informado. Informe outro ID apenas se sua integracao usar
+um receiver proprio.
 
 ## Instalacao
 
 ```yaml
 dependencies:
-  spalla_flutter: ^0.1.0
+  spalla_flutter: ^0.1.1
 ```
 
 Execute `flutter pub get` no aplicativo. Depois de adicionar o plugin,
@@ -56,7 +58,7 @@ Para PiP, configure a Activity no AndroidManifest.xml:
 
 O SDK inclui as permissoes INTERNET/ACCESS_NETWORK_STATE e um OptionsProvider
 de Cast. Se o aplicativo ja tem um OptionsProvider, concilie a configuracao
-para nao declarar dois providers. Informe o application ID antes de usar Cast.
+para nao declarar dois providers.
 
 ## iOS
 
@@ -68,9 +70,11 @@ Use iOS 15.0 ou superior no projeto/Podfile. Para Cast, adicione ao Info.plist:
 <key>NSBonjourServices</key>
 <array>
     <string>_googlecast._tcp</string>
-    <string>_SEU_CAST_APP_ID._googlecast._tcp</string>
+    <string>_7238CBCE._googlecast._tcp</string>
 </array>
 ```
+
+Com receiver proprio, substitua `7238CBCE` pelo seu application ID.
 
 Para PiP/reproducao em background, habilite Background Modes > Audio,
 AirPlay and Picture in Picture e inclua:
@@ -91,7 +95,7 @@ import 'package:spalla_flutter/spalla_flutter.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  initialize('SEU_TOKEN_SDK', 'SEU_CAST_APP_ID');
+  initialize('SEU_TOKEN_SDK');
   runApp(const MaterialApp(home: PlayerScreen()));
 }
 
@@ -237,7 +241,7 @@ Nao coloque widgets que bloqueiem os toques da interface de anuncios.
 - Thumbnails sao expostos por evento; nao ha preview de sprite na barra atual.
 - Cast com receiver fisico, anuncios/DAI com fill, live/DVR e background
   prolongado devem ser validados no aplicativo e nos dispositivos alvo.
-- A versao 0.1.0 nao representa certificacao de equivalencia integral com
+- A versao 0.1.1 nao representa certificacao de equivalencia integral com
   outros SDKs Spalla.
 
 ## Suporte E Licenca
