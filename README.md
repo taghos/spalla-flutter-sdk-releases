@@ -3,7 +3,7 @@
 Player Spalla para aplicativos Flutter Android e iOS, com controles
 compartilhados, fullscreen, selecao de faixas, anuncios, Cast e PiP.
 
-Versao: **0.1.3**.
+Versao: **0.1.4**.
 
 ## Disponibilidade
 
@@ -24,13 +24,15 @@ e suporte via issues. Nao e um checkout do pacote Flutter.
 Obtenha seu token SDK e os identificadores de conteudo na Spalla.
 Para Cast, o SDK usa o receiver Spalla padrao `7238CBCE` quando nenhum
 application ID e informado. Informe outro ID apenas se sua integracao usar
-um receiver proprio.
+um receiver proprio. Receivers proprios sem o namespace
+`urn:x-cast:com.theoplayer.cast` recebem apenas o LOAD padrao do Cast
+(sem configuracao Spalla nem DAI no receiver).
 
 ## Instalacao
 
 ```yaml
 dependencies:
-  spalla_flutter: ^0.1.3
+  spalla_flutter: ^0.1.4
 ```
 
 Execute `flutter pub get` no aplicativo. Depois de adicionar o plugin,
@@ -241,7 +243,7 @@ Nao coloque widgets que bloqueiem os toques da interface de anuncios.
 - Thumbnails sao expostos por evento; nao ha preview de sprite na barra atual.
 - Cast com receiver fisico, anuncios/DAI com fill, live/DVR e background
   prolongado devem ser validados no aplicativo e nos dispositivos alvo.
-- A versao 0.1.3 nao representa certificacao de equivalencia integral com
+- A versao 0.1.4 nao representa certificacao de equivalencia integral com
   outros SDKs Spalla.
 
 ## Suporte E Licenca

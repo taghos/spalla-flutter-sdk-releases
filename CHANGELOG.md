@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.4
+
+- Cast com receiver proprio: o conteudo e enviado por LOAD padrao, sem
+  mensagens Spalla e sem aviso cast_message_failed.
+
 ## 0.1.3
 
 - iOS: os dados da sessao chegam ao receiver ao iniciar o Cast.
