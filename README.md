@@ -3,7 +3,7 @@
 Player Spalla para aplicativos Flutter Android e iOS, com controles
 compartilhados, fullscreen, selecao de faixas, anuncios, Cast e PiP.
 
-Versao: **0.1.1**.
+Versao: **0.1.2**.
 
 ## Disponibilidade
 
@@ -30,7 +30,7 @@ um receiver proprio.
 
 ```yaml
 dependencies:
-  spalla_flutter: ^0.1.1
+  spalla_flutter: ^0.1.2
 ```
 
 Execute `flutter pub get` no aplicativo. Depois de adicionar o plugin,
@@ -241,7 +241,7 @@ Nao coloque widgets que bloqueiem os toques da interface de anuncios.
 - Thumbnails sao expostos por evento; nao ha preview de sprite na barra atual.
 - Cast com receiver fisico, anuncios/DAI com fill, live/DVR e background
   prolongado devem ser validados no aplicativo e nos dispositivos alvo.
-- A versao 0.1.1 nao representa certificacao de equivalencia integral com
+- A versao 0.1.2 nao representa certificacao de equivalencia integral com
   outros SDKs Spalla.
 
 ## Suporte E Licenca

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- iOS: o seletor de Cast encontra os dispositivos da rede.
+
 ## 0.1.1
 
 - Android: o botao de Cast abre o seletor de dispositivos.
