@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3
+
+- iOS: os dados da sessao chegam ao receiver ao iniciar o Cast.
+- iOS: "Parar transmissao" tambem interrompe a reproducao na TV.
+
 ## 0.1.2
 
 - iOS: o seletor de Cast encontra os dispositivos da rede.
